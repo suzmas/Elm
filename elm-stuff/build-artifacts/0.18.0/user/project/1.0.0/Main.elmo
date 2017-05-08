@@ -1,11 +1,11 @@
 var _user$project$Main$invalidAge = function (model) {
-	return (_elm_lang$core$Native_Utils.cmp(model.age, 1) < 0) || (_elm_lang$core$Native_Utils.cmp(model.age, 95) > 0);
+	return ((_elm_lang$core$Native_Utils.cmp(model.age, 1) < 0) || (_elm_lang$core$Native_Utils.cmp(model.age, 95) > 0)) && (!_elm_lang$core$Native_Utils.eq(model.age, 0));
 };
 var _user$project$Main$invalidMatch = function (model) {
 	return !_elm_lang$core$Native_Utils.eq(model.password, model.passwordAgain);
 };
 var _user$project$Main$invalidCharacters = function (model) {
-	return !(A2(
+	return (!(A2(
 		_elm_lang$core$Regex$contains,
 		_elm_lang$core$Regex$regex('[A-Z]'),
 		model.password) && (A2(
@@ -14,7 +14,9 @@ var _user$project$Main$invalidCharacters = function (model) {
 		model.password) && A2(
 		_elm_lang$core$Regex$contains,
 		_elm_lang$core$Regex$regex('[0-9]'),
-		model.password)));
+		model.password)))) && (!_elm_lang$core$Native_Utils.eq(
+		_elm_lang$core$String$length(model.password),
+		0));
 };
 var _user$project$Main$invalidLength = function (model) {
 	return (_elm_lang$core$Native_Utils.cmp(
@@ -40,10 +42,15 @@ var _user$project$Main$validations = {
 		}
 	}
 };
+var _user$project$Main$invalidName = function (model) {
+	return (_elm_lang$core$Native_Utils.cmp(
+		_elm_lang$core$String$length(model.name),
+		2) < 0) && (!_elm_lang$core$Native_Utils.eq(
+		_elm_lang$core$String$length(model.name),
+		0));
+};
 var _user$project$Main$viewValidation = function (model) {
-	var _p0 = _user$project$Main$invalidLength(model) ? {ctor: '_Tuple2', _0: 'red', _1: 'Password must be 8 char'} : (_user$project$Main$invalidAge(model) ? {ctor: '_Tuple2', _0: 'red', _1: 'Invalid Age'} : (_user$project$Main$invalidCharacters(model) ? {ctor: '_Tuple2', _0: 'red', _1: 'Bad chars'} : (_user$project$Main$invalidMatch(model) ? {ctor: '_Tuple2', _0: 'red', _1: 'Passwords don\'t match'} : {ctor: '_Tuple2', _0: 'green', _1: 'OK'})));
-	var color = _p0._0;
-	var message = _p0._1;
+	var message = _user$project$Main$invalidLength(model) ? 'Password must be 8 char' : (_user$project$Main$invalidAge(model) ? 'Invalid Age' : (_user$project$Main$invalidCharacters(model) ? 'Bad chars' : (_user$project$Main$invalidMatch(model) ? 'Passwords don\'t match' : 'OK')));
 	return A2(
 		_elm_lang$html$Html$div,
 		{
@@ -51,7 +58,11 @@ var _user$project$Main$viewValidation = function (model) {
 			_0: _elm_lang$html$Html_Attributes$style(
 				{
 					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: 'color', _1: color},
+					_0: {
+						ctor: '_Tuple2',
+						_0: 'color',
+						_1: _elm_lang$core$Native_Utils.eq(message, 'OK') ? 'green' : 'red'
+					},
 					_1: {ctor: '[]'}
 				}),
 			_1: {ctor: '[]'}
@@ -64,12 +75,12 @@ var _user$project$Main$viewValidation = function (model) {
 };
 var _user$project$Main$update = F2(
 	function (msg, model) {
-		var _p1 = msg;
-		switch (_p1.ctor) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
 			case 'Name':
 				return _elm_lang$core$Native_Utils.update(
 					model,
-					{name: _p1._0});
+					{name: _p0._0});
 			case 'Age':
 				return _elm_lang$core$Native_Utils.update(
 					model,
@@ -77,28 +88,28 @@ var _user$project$Main$update = F2(
 						age: A2(
 							_elm_lang$core$Result$withDefault,
 							0,
-							_elm_lang$core$String$toInt(_p1._0))
+							_elm_lang$core$String$toInt(_p0._0))
 					});
 			case 'Password':
 				return _elm_lang$core$Native_Utils.update(
 					model,
-					{password: _p1._0});
+					{password: _p0._0});
 			case 'PasswordAgain':
 				return _elm_lang$core$Native_Utils.update(
 					model,
-					{passwordAgain: _p1._0});
+					{passwordAgain: _p0._0});
 			default:
-				var _p2 = _p1._0;
+				var _p1 = _p0._0;
 				var validationMessage = A3(
 					_elm_lang$core$List$foldl,
 					F2(
 						function (test, allValid) {
-							return test(_p2) ? false : allValid;
+							return test(_p1) ? false : allValid;
 						}),
 					true,
 					_user$project$Main$validations) ? 'Success!' : 'Form not submitted.';
 				return _elm_lang$core$Native_Utils.update(
-					_p2,
+					_p1,
 					{validation: validationMessage});
 		}
 	});
