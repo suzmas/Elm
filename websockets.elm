@@ -27,6 +27,11 @@ type alias Model =
     }
 
 
+init : ( Model, Cmd Msg )
+init =
+    ( Model 1, Cmd.none )
+
+
 
 -- UPDATE
 
@@ -40,7 +45,19 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Roll ->
-            ( model, Cmd.none )
+            ( model, Random.generate NewFace (Random.int 1 10) )
+
+        NewFace newFace ->
+            ( Model newFace, Cmd.none )
+
+
+
+-- SUBSCRIPTIONS
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
 
 
 
@@ -53,16 +70,3 @@ view model =
         [ h1 [] [ text (toString model.dieFace) ]
         , button [ onClick Roll ] [ text "Roll" ]
         ]
-
-
-
--- SUBSCRIPTIONS
--- subscriptions : Model -> Sub Msg
--- subscriptions model =
---     model
--- INIT
-
-
-init : ( Model, Cmd Msg )
-init =
-    ( Model 1, Cmd.none )
