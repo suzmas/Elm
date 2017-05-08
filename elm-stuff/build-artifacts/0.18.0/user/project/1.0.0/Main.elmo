@@ -107,7 +107,7 @@ var _user$project$Main$update = F2(
 							return test(_p1) ? false : allValid;
 						}),
 					true,
-					_user$project$Main$validations) ? 'Success!' : 'Form not submitted.';
+					_user$project$Main$validations) ? 'Success!' : 'Form not submitted. Please correct errors.';
 				return _elm_lang$core$Native_Utils.update(
 					_p1,
 					{validation: validationMessage});
