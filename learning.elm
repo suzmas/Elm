@@ -77,7 +77,7 @@ update msg model =
                     then
                         "Success!"
                     else
-                        "Form not submitted."
+                        "Form not submitted. Please correct errors."
             in
                 { model | validation = validationMessage }
 
