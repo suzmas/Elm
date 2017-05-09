@@ -5,8 +5,12 @@
 module Main exposing (..)
 
 import Html exposing (..)
+import Html.Attributes
 import Html.Events exposing (..)
 import Random
+import List
+import Svg exposing (..)
+import Svg.Attributes exposing (..)
 
 
 main =
@@ -78,6 +82,29 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h1 [] [ text (toString model.dieFace1 ++ " " ++ toString model.dieFace2) ]
-        , button [ onClick Roll ] [ text "Roll" ]
+        [ h1 [] [ Html.text (toString model.dieFace1 ++ " " ++ toString model.dieFace2) ]
+        , svg
+            [ width "120", height "120", viewBox "0 0 120 120", fill "white", stroke "black", strokeWidth "3", Html.Attributes.style [ ( "padding-left", "20px" ) ] ]
+            (List.append
+                [ rect [ x "1", y "1", width "100", height "100", rx "15", ry "15" ] [] ]
+                (svgCirclesForDieFace model.dieFace1)
+            )
+        , button [ onClick Roll ] [ Html.text "Roll" ]
         ]
+
+
+svgCirclesForDieFace : Int -> List (Svg Msg)
+svgCirclesForDieFace dieFace =
+    case dieFace of
+        5 ->
+            [ circle [ cx "10", cy "50", r "10", fill "black" ] []
+            , circle [ cx "20", cy "50", r "10", fill "black" ] []
+            , circle [ cx "30", cy "50", r "10", fill "black" ] []
+            , circle [ cx "40", cy "50", r "10", fill "black" ] []
+            , circle [ cx "50", cy "50", r "10", fill "black" ] []
+            ]
+
+        _ ->
+            [ circle [ cx "9", cy "10", r "3", fill "black" ] []
+            , circle [ cx "10", cy "10", r "3", fill "black" ] []
+            ]
