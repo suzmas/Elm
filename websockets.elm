@@ -33,23 +33,33 @@ init =
     ( Model 1 1, Cmd.none )
 
 
+dieGenerator : Random.Generator Int
+dieGenerator =
+    Random.int 1 6
+
+
+diePairGenerator : Random.Generator ( Int, Int )
+diePairGenerator =
+    Random.pair dieGenerator dieGenerator
+
+
 
 -- UPDATE
 
 
 type Msg
     = Roll
-    | NewFace Int
+    | NewFaces ( Int, Int )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Roll ->
-            ( model, Random.generate NewFace (Random.int 1 6) )
+            ( model, Random.generate NewFaces diePairGenerator )
 
-        NewFace newFace ->
-            ( Model newFace newFace, Cmd.none )
+        NewFaces ( newFace1, newFace2 ) ->
+            ( Model newFace1 newFace2, Cmd.none )
 
 
 
