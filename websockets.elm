@@ -96,15 +96,35 @@ view model =
 svgCirclesForDieFace : Int -> List (Svg Msg)
 svgCirclesForDieFace dieFace =
     case dieFace of
+        1 ->
+            [ circle [ cx "10", cy "10", r "3", fill "black" ] []
+            ]
+
+        2 ->
+            [ circle [ cx "10", cy "10", r "3", fill "black" ] []
+            , circle [ cx "20", cy "20", r "3", fill "black" ] []
+            ]
+
+        3 ->
+            [ circle [ cx "30", cy "10", r "3", fill "black" ] []
+            , circle [ cx "40", cy "20", r "3", fill "black" ] []
+            , circle [ cx "50", cy "30", r "3", fill "black" ] []
+            ]
+
+        4 ->
+            [ circle [ cx "20", cy "10", r "3", fill "black" ] []
+            , circle [ cx "30", cy "20", r "3", fill "black" ] []
+            , circle [ cx "40", cy "30", r "3", fill "black" ] []
+            , circle [ cx "50", cy "40", r "3", fill "black" ] []
+            ]
+
         5 ->
-            [ circle [ cx "10", cy "50", r "10", fill "black" ] []
-            , circle [ cx "20", cy "50", r "10", fill "black" ] []
-            , circle [ cx "30", cy "50", r "10", fill "black" ] []
-            , circle [ cx "40", cy "50", r "10", fill "black" ] []
-            , circle [ cx "50", cy "50", r "10", fill "black" ] []
+            [ circle [ cx "10", cy "10", r "3", fill "black" ] []
+            , circle [ cx "20", cy "20", r "3", fill "black" ] []
+            , circle [ cx "30", cy "30", r "3", fill "black" ] []
+            , circle [ cx "40", cy "40", r "3", fill "black" ] []
+            , circle [ cx "50", cy "50", r "3", fill "black" ] []
             ]
 
         _ ->
-            [ circle [ cx "9", cy "10", r "3", fill "black" ] []
-            , circle [ cx "10", cy "10", r "3", fill "black" ] []
-            ]
+            []

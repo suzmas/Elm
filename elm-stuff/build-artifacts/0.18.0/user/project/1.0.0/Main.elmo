@@ -1,146 +1,8 @@
 var _user$project$Main$svgCirclesForDieFace = function (dieFace) {
 	var _p0 = dieFace;
-	if (_p0 === 5) {
-		return {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$svg$Svg$circle,
-				{
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$cx('10'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$cy('50'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$r('10'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {
-				ctor: '::',
-				_0: A2(
-					_elm_lang$svg$Svg$circle,
-					{
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$cx('20'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$cy('50'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$r('10'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-									_1: {ctor: '[]'}
-								}
-							}
-						}
-					},
-					{ctor: '[]'}),
-				_1: {
-					ctor: '::',
-					_0: A2(
-						_elm_lang$svg$Svg$circle,
-						{
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$cx('30'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$cy('50'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$r('10'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-										_1: {ctor: '[]'}
-									}
-								}
-							}
-						},
-						{ctor: '[]'}),
-					_1: {
-						ctor: '::',
-						_0: A2(
-							_elm_lang$svg$Svg$circle,
-							{
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$cx('40'),
-								_1: {
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$cy('50'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$r('10'),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-											_1: {ctor: '[]'}
-										}
-									}
-								}
-							},
-							{ctor: '[]'}),
-						_1: {
-							ctor: '::',
-							_0: A2(
-								_elm_lang$svg$Svg$circle,
-								{
-									ctor: '::',
-									_0: _elm_lang$svg$Svg_Attributes$cx('50'),
-									_1: {
-										ctor: '::',
-										_0: _elm_lang$svg$Svg_Attributes$cy('50'),
-										_1: {
-											ctor: '::',
-											_0: _elm_lang$svg$Svg_Attributes$r('10'),
-											_1: {
-												ctor: '::',
-												_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-												_1: {ctor: '[]'}
-											}
-										}
-									}
-								},
-								{ctor: '[]'}),
-							_1: {ctor: '[]'}
-						}
-					}
-				}
-			}
-		};
-	} else {
-		return {
-			ctor: '::',
-			_0: A2(
-				_elm_lang$svg$Svg$circle,
-				{
-					ctor: '::',
-					_0: _elm_lang$svg$Svg_Attributes$cx('9'),
-					_1: {
-						ctor: '::',
-						_0: _elm_lang$svg$Svg_Attributes$cy('10'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$svg$Svg_Attributes$r('3'),
-							_1: {
-								ctor: '::',
-								_0: _elm_lang$svg$Svg_Attributes$fill('black'),
-								_1: {ctor: '[]'}
-							}
-						}
-					}
-				},
-				{ctor: '[]'}),
-			_1: {
+	switch (_p0) {
+		case 1:
+			return {
 				ctor: '::',
 				_0: A2(
 					_elm_lang$svg$Svg$circle,
@@ -163,8 +25,339 @@ var _user$project$Main$svgCirclesForDieFace = function (dieFace) {
 					},
 					{ctor: '[]'}),
 				_1: {ctor: '[]'}
-			}
-		};
+			};
+		case 2:
+			return {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$circle,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cx('10'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cy('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$r('3'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$svg$Svg$circle,
+						{
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cx('20'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cy('20'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$r('3'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}
+			};
+		case 3:
+			return {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$circle,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cx('30'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cy('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$r('3'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$svg$Svg$circle,
+						{
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cx('40'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cy('20'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$r('3'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$svg$Svg$circle,
+							{
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cx('50'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$cy('30'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$r('3'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {ctor: '[]'}
+					}
+				}
+			};
+		case 4:
+			return {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$circle,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cx('20'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cy('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$r('3'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$svg$Svg$circle,
+						{
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cx('30'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cy('20'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$r('3'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$svg$Svg$circle,
+							{
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cx('40'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$cy('30'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$r('3'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$svg$Svg$circle,
+								{
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$cx('50'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$cy('40'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$r('3'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {ctor: '[]'}
+						}
+					}
+				}
+			};
+		case 5:
+			return {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$svg$Svg$circle,
+					{
+						ctor: '::',
+						_0: _elm_lang$svg$Svg_Attributes$cx('10'),
+						_1: {
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cy('10'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$r('3'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+									_1: {ctor: '[]'}
+								}
+							}
+						}
+					},
+					{ctor: '[]'}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$svg$Svg$circle,
+						{
+							ctor: '::',
+							_0: _elm_lang$svg$Svg_Attributes$cx('20'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cy('20'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$r('3'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+										_1: {ctor: '[]'}
+									}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$svg$Svg$circle,
+							{
+								ctor: '::',
+								_0: _elm_lang$svg$Svg_Attributes$cx('30'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$cy('30'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$r('3'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+											_1: {ctor: '[]'}
+										}
+									}
+								}
+							},
+							{ctor: '[]'}),
+						_1: {
+							ctor: '::',
+							_0: A2(
+								_elm_lang$svg$Svg$circle,
+								{
+									ctor: '::',
+									_0: _elm_lang$svg$Svg_Attributes$cx('40'),
+									_1: {
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$cy('40'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$r('3'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+												_1: {ctor: '[]'}
+											}
+										}
+									}
+								},
+								{ctor: '[]'}),
+							_1: {
+								ctor: '::',
+								_0: A2(
+									_elm_lang$svg$Svg$circle,
+									{
+										ctor: '::',
+										_0: _elm_lang$svg$Svg_Attributes$cx('50'),
+										_1: {
+											ctor: '::',
+											_0: _elm_lang$svg$Svg_Attributes$cy('50'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$svg$Svg_Attributes$r('3'),
+												_1: {
+													ctor: '::',
+													_0: _elm_lang$svg$Svg_Attributes$fill('black'),
+													_1: {ctor: '[]'}
+												}
+											}
+										}
+									},
+									{ctor: '[]'}),
+								_1: {ctor: '[]'}
+							}
+						}
+					}
+				}
+			};
+		default:
+			return {ctor: '[]'};
 	}
 };
 var _user$project$Main$subscriptions = function (model) {
