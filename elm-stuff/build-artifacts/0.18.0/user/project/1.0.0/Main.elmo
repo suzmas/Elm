@@ -1,12 +1,13 @@
 var _user$project$Main$subscriptions = function (model) {
 	return _elm_lang$core$Platform_Sub$none;
 };
-var _user$project$Main$Model = function (a) {
-	return {dieFace: a};
-};
+var _user$project$Main$Model = F2(
+	function (a, b) {
+		return {dieFace1: a, dieFace2: b};
+	});
 var _user$project$Main$init = {
 	ctor: '_Tuple2',
-	_0: _user$project$Main$Model(1),
+	_0: A2(_user$project$Main$Model, 1, 1),
 	_1: _elm_lang$core$Platform_Cmd$none
 };
 var _user$project$Main$NewFace = function (a) {
@@ -25,9 +26,10 @@ var _user$project$Main$update = F2(
 					A2(_elm_lang$core$Random$int, 1, 6))
 			};
 		} else {
+			var _p1 = _p0._0;
 			return {
 				ctor: '_Tuple2',
-				_0: _user$project$Main$Model(_p0._0),
+				_0: A2(_user$project$Main$Model, _p1, _p1),
 				_1: _elm_lang$core$Platform_Cmd$none
 			};
 		}
@@ -45,7 +47,13 @@ var _user$project$Main$view = function (model) {
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html$text(
-						_elm_lang$core$Basics$toString(model.dieFace)),
+						A2(
+							_elm_lang$core$Basics_ops['++'],
+							_elm_lang$core$Basics$toString(model.dieFace1),
+							A2(
+								_elm_lang$core$Basics_ops['++'],
+								' ',
+								_elm_lang$core$Basics$toString(model.dieFace2)))),
 					_1: {ctor: '[]'}
 				}),
 			_1: {

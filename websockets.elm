@@ -23,13 +23,14 @@ main =
 
 
 type alias Model =
-    { dieFace : Int
+    { dieFace1 : Int
+    , dieFace2 : Int
     }
 
 
 init : ( Model, Cmd Msg )
 init =
-    ( Model 1, Cmd.none )
+    ( Model 1 1, Cmd.none )
 
 
 
@@ -45,10 +46,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Roll ->
-            ( model, Random.generate NewFace (Random.int 1 10) )
+            ( model, Random.generate NewFace (Random.int 1 6) )
 
         NewFace newFace ->
-            ( Model newFace, Cmd.none )
+            ( Model newFace newFace, Cmd.none )
 
 
 
@@ -67,6 +68,6 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h1 [] [ text (toString model.dieFace) ]
+        [ h1 [] [ text (toString model.dieFace1 ++ " " ++ toString model.dieFace2) ]
         , button [ onClick Roll ] [ text "Roll" ]
         ]
